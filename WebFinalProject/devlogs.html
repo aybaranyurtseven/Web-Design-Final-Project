@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <title>Full Snack Developers</title>
+        <link rel="icon" href="mainLogo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="h-logo">
+                    <a href="main.html" target="_self">
+                        <img src="mainLogo.png" alt="Brand Logo Header">
+                    </a>
+                </div>
+                <div class="h-nav">
+                    <a href="main.html#games" onclick="scrollToSection('games')">GAMES</a>
+                    <a href="main.html#news" onclick="scrollToSection('news')">NEWS</a>
+                    <a href="main.html#careers" onclick="scrollToSection('careers')">CAREERS</a>
+                    <a href="#devlogs">DEVLOGS</a>
+                </div>
+            </div>
+        </header> 
+
+        <section id="videos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yI_iI5ohT8M" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XN3dV5VfXOU" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GWc7QppCPHM" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+    </body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .h-logo img {
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .h-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .h-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .brandLogoMain {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+            margin-bottom: 5px;
+            text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-container a {
+        margin: 15px;
+    }
+
+    .games {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .news {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 175px;
+        margin-right: 175px;
+    }
+
+    .careers {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .careers h1 {
+        margin-bottom: 20px;
+    }
+
+    .careers ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .careers li {
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .careers li a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .careers li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+    }
+
+    #videos {
+    display: grid;
+    grid-template-columns: repeat(1fr, 3); 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: #f4f4f4;
+    }
+
+    .video-item {
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<script>
+    function changeLanguage() 
+    {
+        var selectedLanguage = document.getElementById("languageSelect").value;
+        var currentFileName = window.location.pathname.split('/').pop(); // Get the current file name
+
+        // Determine the file name based on the selected language
+        var fileName = (selectedLanguage === 'en') ? 'main.html' : 'mainTr.html';
+
+        // Redirect only if the selected language is different from the current language
+        if (currentFileName !== fileName) {
+            window.location.href = fileName;
+        }
+    }
+
+    function scrollToSection(sectionId) 
+    {
+        var section = document.getElementById(sectionId);
+        if (section) 
+        {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>

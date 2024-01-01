@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>Full Snack Developers</title>
+        <link rel="icon" href="mainLogo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="h-logo">
+                    <a href="main.html" target="_self">
+                        <img src="mainLogo.png" alt="Brand Logo Header">
+                    </a>
+                </div>
+                <div class="h-nav">
+                    <a href="#games" onclick="scrollToSection('games')">GAMES</a>
+                    <a href="#news" onclick="scrollToSection('news')">NEWS</a>
+                    <a href="#careers">CAREERS</a>
+                    <a href="#devlogs">DEVLOGS</a>
+                    <select id="languageSelect" onchange="changeLanguage()">
+                        <option value="en" selected>English</option>
+                        <option value="tr">Türkçe</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <img src="banner.png" alt="Brand Logo Main" class="brandLogoMain"> 
+        
+        <section id="games">
+            <div class="games">
+                <h1>GAMES</h1>
+                <div class="image-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.rovio.angrybirdsfriends">
+                        <img src="angry birds.jpeg" alt="Angry Birds" width="256" height="256"> 
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.king.candycrushsaga">
+                        <img src="candy crush.jpeg" alt="Candy Crush" width="256" height="256">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale">
+                        <img src="clash royale.jpeg" alt="Clash Royale" width="256" height="256">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ea.game.pvzfree_row&hl=tr&gl=US">
+                        <img src="plantVsZombies.jpeg" alt="Plants vs Zombies" width="256" height="256">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="news">
+            <div class="news">
+                <h1>NEWS</h1>
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="clashRoyale.png" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="bestWorkspace.png" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="slider3.png" class="d-block" style="width: 100%">
+                        </div>
+                    </div>
+                    
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="careers">
+            <div class="careers">
+                <h1>Careers</h1>
+                <ul>
+                    <li>
+                        <a href="" title="Lead Game Developer">
+                        <span>Lead Game Developer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Senior Game Developer">
+                        <span>Senior Game Developer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Game Designer">
+                        <span>Game Designer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="3D Game Artist">
+                        <span>3D Game Artist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Concept Artist">
+                        <span>Concept Artist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Senior Concept Artist">
+                        <span>Senior Concept Artist</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        
+    </body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .h-logo img {
+        width: 80px;
+        height: auto;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .h-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .h-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    @media only screen and (min-width: 768px) {
+        /* Apply these styles for screens wider than 768px */
+        .container {
+            flex-direction: row; /* Revert to row layout for larger screens */
+            align-items: center;
+        }
+
+        .h-nav {
+            flex-direction: row; /* Revert to row layout for larger screens */
+            gap: 20px;
+        }
+    }
+
+    .brandLogoMain {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+            margin-bottom: 5px;
+            text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-container a {
+        margin: 15px;
+    }
+
+    .games {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .news {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 175px;
+        margin-right: 175px;
+    }
+
+    #careers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    .careers {
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .careers ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .careers li {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .careers li a {
+        display: block;
+        padding: 20px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .careers li a:hover {
+        transform: scale(1.10);
+    }
+</style>
+
+<script>
+    function changeLanguage() 
+    {
+        var selectedLanguage = document.getElementById("languageSelect").value;
+        var currentFileName = window.location.pathname.split('/').pop(); // Get the current file name
+
+        // Determine the file name based on the selected language
+        var fileName = (selectedLanguage === 'en') ? 'main.html' : 'mainTr.html';
+
+        // Redirect only if the selected language is different from the current language
+        if (currentFileName !== fileName) {
+            window.location.href = fileName;
+        }
+    }
+
+    function scrollToSection(sectionId) 
+    {
+        var section = document.getElementById(sectionId);
+        if (section) 
+        {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>

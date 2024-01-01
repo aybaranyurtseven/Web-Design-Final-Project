@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+  .number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+  }
+  .button {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+<script>
+  function play() {
+    // 1 ile 54 arasında 6 tane farklı sayı üret
+    var numbers = [];
+    while (numbers.length < 6) {
+      var number = Math.floor(Math.random() * 54) + 1;
+      if (numbers.indexOf(number) === -1) {
+        numbers.push(number);
+      }
+    }
+
+var numberElements = document.getElementsByClassName("number");
+    for (var i = 0; i < numberElements.length; i++) {
+      numberElements[i].innerHTML = numbers[i];
+    }
+  }
+</script>
+</head>
+<body>
+  <div class="number">12</div>
+  <div class="number">25</div>
+  <div class="number">33</div>
+  <div class="number">41</div>
+  <div class="number">49</div>
+  <div class="number">54</div>
+  <button class="button" onclick="play()">Oyna</button>
+</body>
+</html>
